@@ -3,7 +3,8 @@
 // Reemplaza la URL de abajo con tu webhook real (n8n, Make,
 // Zapier, etc.) para recibir los leads donde quieras.
 // ══════════════════════════════════════════════════════════
-const WEBHOOK_URL = 'https://flows.soul23.cloud/webhook/hCot6x9DsrOJjbL4ciJSQ0Y2';
+const WEBHOOK_URL = 'https://flows.soul23.cloud/webhook/WSOa0LJpk8yW72H4V0supc';
+const TEST_WEBHOOK_URL = 'https://flows.soul23.cloud/webhook-test/WSOa0LJpk8yW72H4V0supc';
 
 function submitLead() {
   const nombre = document.getElementById('f-nombre').value.trim();
@@ -34,15 +35,13 @@ function submitLead() {
   const payload = { nombre, telefono, correo, servicio, mensaje, fecha: new Date().toISOString() };
   const queryParams = new URLSearchParams(payload).toString();
 
-  fetch(`${WEBHOOK_URL}?${queryParams}`, {
-    method: 'GET',
-    mode: 'no-cors' // Ignora políticas CORS del navegador
-  })
-    .then(function () { mostrarExito(); })
-    .catch(function () {
-      // Si el webhook falla igual mostramos éxito (no bloquear al usuario)
-      mostrarExito();
-    });
+  // Se envían a ambos webhooks (producción y test)
+  Promise.allSettled([
+    fetch(`${WEBHOOK_URL}?${queryParams}`, { method: 'GET', mode: 'no-cors' }),
+    fetch(`${TEST_WEBHOOK_URL}?${queryParams}`, { method: 'GET', mode: 'no-cors' })
+  ]).finally(function () {
+    mostrarExito();
+  });
 }
 
 function mostrarExito() {
