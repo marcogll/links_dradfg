@@ -1,2 +1,40 @@
-# links_dradfg
-link site for client
+# Dra. Daniela Flores Gutiérrez - Landing Page
+
+Landing page profesional para ginecóloga en Saltillo, Coahuila. Diseño móvil-first con formulario de captura de leads.
+
+## Estructura
+
+```
+/
+├── index.html    # Página principal
+├── main.js      # Lógica (leads, analytics, admin)
+├── style.css    # Estilos
+└── src/img/     # Imágenes (logo, foto de perfil)
+```
+
+## Características
+
+- Perfil profesional con rating de Doctoralia
+- Enlaces a Instagram, Doctoralia, WhatsApp, ubicación
+- Dos consultorios con información de contacto
+- Formulario de captura de leads con webhook
+- Integración Meta Pixel (evento Lead)
+- Analytics básico (visitas, clics, origen)
+- Panel admin (contraseña: `dra2024`)
+
+## Configuración
+
+### Meta Pixel
+Reemplaza `TU_PIXEL_ID` en `index.html` líneas 32 y 37.
+
+### Webhook de leads
+Edita `main.js` línea 6 para usar tu webhook (n8n, Make, Zapier).
+
+### Deploy
+Simplemente sube los archivos a cualquier hosting estático (Netlify, Vercel, GitHub Pages, hosting tradicional).
+
+## Tech
+
+- HTML5, CSS3, Vanilla JS
+- Google Fonts (Inter, Playfair Display)
+- Sin dependencias externas
