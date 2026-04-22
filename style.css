@@ -451,7 +451,7 @@ body::after {
 }
 
 .footer-signature {
-  margin-top: 0.28rem;
+  margin-top: 1.15rem;
   font-size: 0.55rem;
   color: rgba(51, 51, 51, 0.6);
   letter-spacing: 0.02em;
@@ -463,10 +463,11 @@ body::after {
 .footer a.footer-credit:visited,
 .footer a.footer-credit:hover,
 .footer a.footer-credit:active {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.6rem;
   font-size: inherit;
   font-weight: 400;
   text-decoration: none !important;
@@ -482,7 +483,7 @@ body::after {
 
 .footer-logo {
   display: block;
-  height: 1.6rem;
+  height: 0.8rem;
   width: auto;
   opacity: 0.42;
 }
