@@ -28,7 +28,7 @@ Landing page profesional para ginecóloga en Saltillo, Coahuila. Diseño móvil-
 Reemplaza `TU_PIXEL_ID` en `index.html` líneas 32 y 37.
 
 ### Webhook de leads
-Edita `main.js` línea 6 para usar tu webhook (n8n, Make, Zapier).
+Edita `main.js` para usar tu webhook (n8n, Make, Zapier). El formulario envía los datos por `POST` como `application/x-www-form-urlencoded`.
 
 ### Deploy
 Simplemente sube los archivos a cualquier hosting estático (Netlify, Vercel, GitHub Pages, hosting tradicional).

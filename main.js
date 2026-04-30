@@ -4,7 +4,19 @@
 // Zapier, etc.) para recibir los leads donde quieras.
 // ══════════════════════════════════════════════════════════
 const WEBHOOK_URL = 'https://flows.soul23.cloud/webhook/WSOa0LJpk8yW72H4V0supc';
-const TEST_WEBHOOK_URL = 'https://flows.soul23.cloud/webhook-test/WSOa0LJpk8yW72H4V0supc';
+
+function postLead(url, payload) {
+  const formData = new FormData();
+  Object.entries(payload).forEach(function ([key, value]) {
+    formData.append(key, value);
+  });
+
+  return fetch(url, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: formData
+  });
+}
 
 function submitLead() {
   const nombre = document.getElementById('f-nombre').value.trim();
@@ -33,13 +45,8 @@ function submitLead() {
 
   // ── ENVÍO AL WEBHOOK ──
   const payload = { nombre, telefono, correo, servicio, mensaje, fecha: new Date().toISOString() };
-  const queryParams = new URLSearchParams(payload).toString();
 
-  // Se envían a ambos webhooks (producción y test)
-  Promise.allSettled([
-    fetch(`${WEBHOOK_URL}?${queryParams}`, { method: 'GET', mode: 'no-cors' }),
-    fetch(`${TEST_WEBHOOK_URL}?${queryParams}`, { method: 'GET', mode: 'no-cors' })
-  ]).finally(function () {
+  postLead(WEBHOOK_URL, payload).finally(function () {
     mostrarExito();
   });
 }
