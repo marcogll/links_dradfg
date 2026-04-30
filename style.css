@@ -525,7 +525,10 @@ body::after {
 .links .link-btn:nth-child(5) { animation-delay: 0.78s; }
 
 #contact-links.collapsed { max-height: 0 !important; padding: 0 !important; overflow: hidden; opacity: 0; }
+#more-contact:not(.collapsed) { max-height: 1000px !important; }
 .section-label.collapsed { color: var(--teal) !important; }
+#more-arrow { display: inline-block; transition: transform 0.3s ease; }
+.section-label:not(.collapsed) #more-arrow { transform: rotate(180deg); }
 
 /* ── FORMULARIO LEAD ── */
 .lead-form-wrap {
