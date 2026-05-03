@@ -1,19 +1,23 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://soul23.mx/logo/s23_logo_wh.png">
-    <img src="https://soul23.mx/logo/s23_logo_blk.png" alt="Soul23" width="110">
-  </picture>
+<div align="center">
+
+<img src="https://soul23.mx/logo/soul23_logo.svg" width="90" alt="Soul23">
+
+# Dra Dflores
+
+Software project for business operations ⚙️
+
+<p>
+    <img src="https://img.shields.io/badge/Docker-111111?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+
 </p>
+
+</div>
+
+---
 
 <h1 align="center">links_dradfg.git</h1>
 
-<p align="center">
-  Landing page profesional para ginecóloga en Saltillo, Coahuila. Diseño móvil-first con formulario de captura de leads.
-</p>
 
-<p align="center">
-  [![Docker](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/marcogll)
-</p>
 
 
 ## Estructura
@@ -52,3 +56,4 @@ Simplemente sube los archivos a cualquier hosting estático (Netlify, Vercel, Gi
 - HTML5, CSS3, Vanilla JS
 - Google Fonts (Inter, Playfair Display)
 - Sin dependencias externas
+
