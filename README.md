@@ -7,17 +7,15 @@
 </picture>
 </a>
 
+</div>
+
 # Dra Dflores
 
-Software project for business operations ⚙️
+Proyecto de software para operaciones empresariales ⚙️
 
 <p>
-    <img src="https://img.shields.io/badge/Docker-111111?style=flat-square&logo=docker&logoColor=white" alt="Docker">
-
-  <img src="https://img.shields.io/badge/website-111111?style=flat-square&logo=github&logoColor=white" alt="Website">
+  <img src="https://img.shields.io/badge/español-111111?style=flat-square&logo=googletranslate&logoColor=white" alt="Español">
 </p>
-
-</div>
 
 ---
 
@@ -62,4 +60,5 @@ Simplemente sube los archivos a cualquier hosting estático (Netlify, Vercel, Gi
 - HTML5, CSS3, Vanilla JS
 - Google Fonts (Inter, Playfair Display)
 - Sin dependencias externas
+
 
